@@ -22,7 +22,7 @@ def callback(data):
     rospy.loginfo("y: %f", int_value2)
     rospy.loginfo("z: %f", int_value3)
 
-pub = rospy.Publisher('quatpub', Quaternion, queue_size=10)
+pub = rospy.Publisher('quatsub', Quaternion, queue_size=10)
 sub = rospy.Subscriber("random_int_point", Point, callback)  
 rate = rospy.Rate(1) # 1hz
 while not rospy.is_shutdown():
